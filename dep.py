@@ -7,6 +7,8 @@ import re
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
 
 # import nltk
 # from nltk.corpus import stopwords
@@ -42,6 +44,8 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 
 # Streamlit app code
 st.title("Sentiment Analysis App")
+st.subheader("✨Unveiling Experiences at XYZ-Hotel🧧")
+st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
 
 # User input text area
 user_input = st.text_area("write a review to us :")
@@ -67,3 +71,9 @@ if st.button("Predict your sentiments"):
             st.write("It's a neutral comment 😐")
         else:
             st.write("It's a negative comment 😔")
+
+if user_input:
+    w = WordCloud().generate(user_input)
+    plt.imshow(w)
+    plt.axis("off")
+    st.pyplot()
