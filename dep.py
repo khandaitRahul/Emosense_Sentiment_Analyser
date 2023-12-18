@@ -7,7 +7,6 @@ import re
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-import matplotlib.pyplot as plt
 from wordcloud import WordCloud
 
 # import nltk
@@ -47,6 +46,15 @@ st.title("Sentiment Analysis App")
 st.subheader("✨Unveiling Experiences at XYZ-Hotel🧧")
 st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
 
+
+# wordcloud function
+def generate_wordcloud(user_input):
+    wordcloud = WordCloud(width=800, height=400, background_color="white").generate(
+        user_input
+    )
+    st.image(wordcloud.to_image(), caption="Word Cloud", use_column_width=True)
+
+
 # User input text area
 user_input = st.text_area("write a review to us :")
 
@@ -73,7 +81,4 @@ if st.button("Predict your sentiments"):
             st.write("It's a negative comment 😔")
 
 if user_input:
-    w = WordCloud().generate(user_input)
-    plt.imshow(w)
-    plt.axis("off")
-    st.pyplot()
+    generate_wordcloud(user_input)
