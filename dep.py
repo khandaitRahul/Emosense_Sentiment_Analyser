@@ -53,6 +53,7 @@ color:rgb(0 0 0);
 [id="unveiling-experiences-at-xyz-hotel"]{
 color:rgb(0 0 0);
 font-weight: 900;
+font-family: cursive;
 }
 </style>
 """
