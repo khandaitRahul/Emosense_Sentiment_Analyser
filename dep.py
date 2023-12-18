@@ -46,7 +46,7 @@ st.title("Sentiment Analysis App")
 # User input text area
 user_input = st.text_area("Enter your hotel review:")
 
-if st.button("Predict Sentiment"):
+if st.button("Predict your sentiments"):
     # Check if the user has entered a review
     if not user_input:
         st.warning("Please enter a review before predicting the sentiment.")
@@ -62,8 +62,8 @@ if st.button("Predict Sentiment"):
 
         # Display sentiment along with emoticons
         if sentiment[0] == "positive":
-            st.write("It's a positive sentiment!! 😃")
+            st.write("It's a positive comment!! 😃")
         elif sentiment[0] == "neutral":
-            st.write("It's a neutral sentiment 😐")
+            st.write("It's a neutral comment 😐")
         else:
-            st.write("It's a negative sentiment 😔")
+            st.write("It's a negative comment 😔")
