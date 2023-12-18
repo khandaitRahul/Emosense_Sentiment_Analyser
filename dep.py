@@ -46,7 +46,7 @@ page_bg_img = """
 background: linear-gradient(45deg, red, blue);
 }
 
-[class="css-10trblm e16nr0p33"]{
+[id="sentiment-analysis-app"]{
 color:rgb(0 0 0);
 }
 </style>
