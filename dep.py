@@ -1,4 +1,5 @@
 import streamlit as st
+
 # import joblib
 import pickle
 import pandas as pd
@@ -6,8 +7,9 @@ import re
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-import nltk
-from nltk.corpus import stopwords
+
+# import nltk
+# from nltk.corpus import stopwords
 
 # Save the TF-IDF Vectorizer as plain text
 # vectorizer = joblib.load('tfidf_vectorizer.joblib')
@@ -19,23 +21,23 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 
 
 # Preprocessing function with stop words removal
-def preprocess_text(text):
-    text = text.lower()
-    text = re.sub("\[.*?\]", "", text)
-    text = re.sub("https?://*", "", text)
-    text = re.sub("\www.*", "", text)
-    text = re.sub("\.com*", "", text)
-    text = re.sub("<.*?>+", "", text)
-    text = re.sub("[%s]" % re.escape(string.punctuation), "", text)
-    text = re.sub("\n", "", text)
-    text = re.sub("\w*\d\w*", "", text)
+# def preprocess_text(text):
+#     text = text.lower()
+#     text = re.sub("\[.*?\]", "", text)
+#     text = re.sub("https?://*", "", text)
+#     text = re.sub("\www.*", "", text)
+#     text = re.sub("\.com*", "", text)
+#     text = re.sub("<.*?>+", "", text)
+#     text = re.sub("[%s]" % re.escape(string.punctuation), "", text)
+#     text = re.sub("\n", "", text)
+#     text = re.sub("\w*\d\w*", "", text)
 
-    # Remove stop words (customize this list based on your needs)
-    stop_words = set(stopwords.words("english"))
-    words = nltk.word_tokenize(text)
-    text = " ".join([word for word in words if word.lower() not in stop_words])
+#     # Remove stop words (customize this list based on your needs)
+#     stop_words = set(stopwords.words("english"))
+#     words = nltk.word_tokenize(text)
+#     text = " ".join([word for word in words if word.lower() not in stop_words])
 
-    return text
+#     return text
 
 
 # Streamlit app code
@@ -50,10 +52,10 @@ if st.button("Predict Sentiment"):
         st.warning("Please enter a review before predicting the sentiment.")
     else:
         # Preprocess the input text
-        preprocessed_input = preprocess_text(user_input)
+        # preprocessed_input = preprocess_text(user_input)
 
         # Vectorize the input text using the loaded TF-IDF Vectorizer
-        text_vectorized = vectorizer.transform([preprocessed_input])
+        text_vectorized = vectorizer.transform([user_input])
 
         # Make predictions using the loaded Naive Bayes model
         sentiment = mnb_os.predict(text_vectorized)
