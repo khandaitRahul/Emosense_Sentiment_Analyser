@@ -1,4 +1,7 @@
 import streamlit as st
+import subprocess
+
+subprocess.call(["pip", "install", "wordcloud"])
 
 # import joblib
 import pickle
