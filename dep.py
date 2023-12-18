@@ -43,7 +43,7 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 page_bg_img = """
 <style>
 [data-testid="stReportViewContainer"]{
-background-image: linear-gradient( 109.6deg,  rgba(238,58,136,1) 11.2%, rgba(128,162,245,1) 91.1% );
+background-image: linear-gradient( 109.6deg,  #bdc3c7 11.2%, #2c3e50 91.1% );
 }
 
 [id="sentiment-analysis-app"]{
