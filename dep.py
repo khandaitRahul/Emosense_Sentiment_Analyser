@@ -44,7 +44,7 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 st.title("Sentiment Analysis App")
 
 # User input text area
-user_input = st.text_area("Enter your hotel review:")
+user_input = st.text_area("write a review to us :")
 
 if st.button("Predict your sentiments"):
     # Check if the user has entered a review
