@@ -1,7 +1,7 @@
 import streamlit as st
-import subprocess
 
-subprocess.call(["pip", "install", "wordcloud"])
+# import subprocess
+# subprocess.call(["pip", "install", "wordcloud"])
 
 # import joblib
 import pickle
@@ -10,7 +10,8 @@ import re
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from wordcloud import WordCloud
+
+# from wordcloud import WordCloud
 
 # import nltk
 # from nltk.corpus import stopwords
@@ -47,15 +48,13 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 # Streamlit app code
 st.title("Sentiment Analysis App")
 st.subheader("✨Unveiling Experiences at XYZ-Hotel🧧")
-st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
+# st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
 
 
-# wordcloud function
-def generate_wordcloud(user_input):
-    wordcloud = WordCloud(width=800, height=400, background_color="white").generate(
-        user_input
-    )
-    st.image(wordcloud.to_image(), caption="Word Cloud", use_column_width=True)
+# # wordcloud function
+# def generate_wordcloud(user_input):
+#     wordcloud = WordCloud(width=800, height=400, background_color="white").generate(user_input)
+#     st.image(wordcloud.to_image(), caption="Word Cloud", use_column_width=True)
 
 
 # User input text area
@@ -83,5 +82,5 @@ if st.button("Predict your sentiments"):
         else:
             st.write("It's a negative comment 😔")
 
-if user_input:
-    generate_wordcloud(user_input)
+# if user_input:
+#     generate_wordcloud(user_input)
