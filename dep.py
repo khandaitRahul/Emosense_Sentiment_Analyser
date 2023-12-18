@@ -43,10 +43,14 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 page_bg_img = """
 <style>
 [data-testid="stReportViewContainer"]{
-background: linear-gradient(45deg, red, blue);
+background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
 
 [id="sentiment-analysis-app"]{
+color:rgb(0 0 0);
+}
+
+[id="uneviling-experiences-at-xyz-hotel"]{
 color:rgb(0 0 0);
 }
 </style>
@@ -56,7 +60,7 @@ color:rgb(0 0 0);
 # Streamlit app code
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("Sentiment Analysis App")
-st.subheader("✨Unveiling Experiences at XYZ-Hotel🧧")
+st.subheader("✨ Unveiling Experiences at XYZ-Hotel 🧧")
 # st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
 
 
