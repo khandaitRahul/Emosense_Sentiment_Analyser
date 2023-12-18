@@ -2,8 +2,10 @@ import streamlit as st
 
 # import subprocess
 # subprocess.call(["pip", "install", "wordcloud"])
+# from wordcloud import WordCloud
+# import nltk
+# from nltk.corpus import stopwords
 
-# import joblib
 import pickle
 import pandas as pd
 import re
@@ -11,17 +13,11 @@ import string
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
-# from wordcloud import WordCloud
-
-# import nltk
-# from nltk.corpus import stopwords
 
 # Save the TF-IDF Vectorizer as plain text
-# vectorizer = joblib.load('tfidf_vectorizer.joblib')
 vectorizer = pickle.load(open("tf-idf.sav", "rb"))
 
 # Save the Naive Bayes model as plain text
-# mnb_os = joblib.load('naive_bayes_model.joblib')
 mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 
 
@@ -44,8 +40,17 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 
 #     return text
 
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"]{
+background: linear-gradient(45deg, red, blue);
+}
+</style>
+"""
+
 
 # Streamlit app code
+st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("Sentiment Analysis App")
 st.subheader("✨Unveiling Experiences at XYZ-Hotel🧧")
 # st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
