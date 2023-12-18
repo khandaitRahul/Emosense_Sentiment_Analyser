@@ -50,7 +50,7 @@ background-image: linear-gradient( 109.6deg,  rgba(238,58,136,1) 11.2%, rgba(128
 color:rgb(0 0 0);
 }
 
-[id="uneviling-experiences-at-xyz-hotel"]{
+[id="unveiling-experiences-at-xyz-hotel"]{
 color:rgb(0 0 0);
 }
 </style>
