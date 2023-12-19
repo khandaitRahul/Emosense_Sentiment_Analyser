@@ -71,7 +71,6 @@ background-color: transparent;
 [data-testid="stMarkdownContainer"]{
 color:#faf3dd;
 font-family: Times New Roman;
-font-size:18px;
 letter-spacing: 0.45px;
 }
 </style>
@@ -177,15 +176,16 @@ def main():
         col1, col2, col3 = st.columns([0.45, 0.20, 0.35], gap="small")
         # __left-col__
         with col1:
-            para1 = """
+            para1 = """<span style='font-size:18px;'>
                         EmoSense, an innovative sentiment analysis app, transcends the boundaries of conventional emotional understanding. 
                         Harnessing cutting-edge algorithms, the app sifts through textual content with precision, unraveling the complex spectrum of 
                         sentiments expressed. Its user-friendly interface ensures accessibility for all, making the exploration of emotional landscapes 
                         intuitive and insightful. Businesses can optimize strategies 
                         by tapping into customer sentiments, while individuals can enhance interpersonal connections.
+                        </span>
                     """
             link1 = " <span style='font-size:25px;letter-spacing: 0.45px;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
-            st.markdown(para1)
+            st.markdown(para1, unsafe_allow_html=True)
             st.markdown(link1, unsafe_allow_html=True)
 
         # __middle-col__
@@ -197,14 +197,15 @@ def main():
         # __Right-col__
         with col3:
             link2 = "<span style='font-size:25px; letter-spacing:0.45px;'>[Explore the features & benefits of this app.](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
-            para2 = """
+            para2 = """<span style='font-size:18px;'>
                             EmoSense is more than an app: it's a transformative tool that empowers users to navigate the web of human emotions, 
                             fostering empathy and effective communication. With EmoSense stays ahead of linguistic shifts, 
                             ensuring that users receive accurate and relevant insights. In an era defined by digital connectivity, EmoSense emerges as a valuable 
                             companion, decoding emotions and bridging the gap in our increasingly nuanced communication landscape.
+                        </span>
                         """
             st.markdown(link2, unsafe_allow_html=True)
-            st.markdown(para2)
+            st.markdown(para2, unsafe_allow_html=True)
         st.divider()
 
         # __footer__
