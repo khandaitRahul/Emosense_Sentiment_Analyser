@@ -118,7 +118,7 @@ def main():
     menu = option_menu(
         menu_title=None,
         options=["Review section", "About me"],
-        icons=["house", "book"],
+        icons=["book", "house"],
         menu_icon="cast",
         default_index=0,
         orientation="horizontal",
