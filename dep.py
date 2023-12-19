@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_option_menu import option_menu
 
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
@@ -60,19 +61,12 @@ font-family: cursive;
 """
 
 
-# Streamlit app code
-st.markdown(page_bg_img, unsafe_allow_html=True)
-st.title("Sentiment Analysis App")
-st.subheader("✨ Unveiling Experiences at XYZ-Hotel 🧧")
-st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
-
-
 # Function to generate Word Cloud
 def generate_wordcloud(user_input):
     if user_input and any(
         c.isalpha() for c in user_input
     ):  # Check if there are any alphabetical characters in the input
-        wordcloud = WordCloud(width=800, height=400, background_color="white").generate(
+        wordcloud = WordCloud(width=800, height=200, background_color="white").generate(
             user_input
         )
         fig, ax = plt.subplots(figsize=(10, 5))
@@ -83,33 +77,127 @@ def generate_wordcloud(user_input):
         st.warning("No words to generate a word cloud.")
 
 
-# User input text area
-user_input = st.text_area("write a review to us :")
+def main():
+    # __full screen__
+    st.set_page_config(
+        page_title=None,
+        page_icon=None,
+        layout="wide",
+        initial_sidebar_state="auto",
+        menu_items=None,
+    )
+    st.markdown(page_bg_img, unsafe_allow_html=True)
+    st.title("EmoSense App🎭")  # App name
 
-if st.button("Predict your sentiments"):
-    # Check if the user has entered a review
-    if not user_input:
-        st.warning("Please enter a review before predicting the sentiment.")
+    # __Navigation Bar__
+    menu = option_menu(
+        menu_title=None,
+        options=["About us", "Review section"],
+        icons=["house", "book"],
+        menu_icon="cast",
+        default_index=0,
+        orientation="horizontal",
+    )
+
+    # __Review Section__
+    if menu == "Review section":
+        st.header("Navigating through sentiments with emotions🎎")
+
+        # dividing into two columns using st.columns()
+        col1, col2 = st.columns(2, gap="small")
+        # __Left column__
+        with col1:
+            st.subheader("unveil your experience with XYZ-Hotel🧧")
+            # User input text area
+            user_input = st.text_area("write a review to us :")
+
+            if st.button("Predict your sentiments"):
+                # Check if the user has entered a review
+                if not user_input:
+                    st.warning(
+                        "Please enter a review before predicting the sentiment.",
+                        icon="⚠️",
+                    )
+                else:
+                    # Preprocess the input text
+                    # preprocessed_input = preprocess_text(user_input)
+
+                    # Vectorize the input text using the loaded TF-IDF Vectorizer
+                    text_vectorized = vectorizer.transform([user_input])
+
+                    # Make predictions using the loaded Naive Bayes model
+                    sentiment = mnb_os.predict(text_vectorized)
+
+                    # Display sentiment along with emoticons
+                    if sentiment[0] == "positive":
+                        st.write("It's a positive comment!! 😃")
+                        st.balloons()
+                    elif sentiment[0] == "neutral":
+                        st.write("It's a neutral comment 😐")
+                        st.balloons()
+
+                    else:
+                        st.write("It's a negative comment 😔")
+                        st.snow()
+
+        # __Right column__
+        with col2:
+            # Check if the review is not empty before generating Word Cloud
+            if user_input.strip():
+                generate_wordcloud(user_input)
+            else:
+                st.warning("No words to generate a word cloud.", icon="⚠️")
+
+    # __About us__
     else:
-        # Preprocess the input text
-        # preprocessed_input = preprocess_text(user_input)
+        # __header__
+        st.header("Feel the Pulse : Decoding Emotions with EmoSense💌")
 
-        # Vectorize the input text using the loaded TF-IDF Vectorizer
-        text_vectorized = vectorizer.transform([user_input])
+        # __content-area__
+        col1, col2 = st.columns([1, 3])
+        # __left column__
+        # left black for aesthetic
+        # __Right column__
+        with col2:
+            paragraph = """
+                            EmoSense, an innovative sentiment analysis app, transcends the boundaries of conventional emotional understanding. 
+                            Harnessing cutting-edge algorithms, the app sifts through textual content with precision, unraveling the complex spectrum of 
+                            sentiments expressed. Its user-friendly interface ensures accessibility for all, making the exploration of emotional landscapes 
+                            intuitive and insightful. Whether navigating social media dynamics, assessing customer feedback, or simply decoding written 
+                            communication, EmoSense provides users with a profound understanding of the underlying emotions. Businesses can optimize strategies 
+                            by tapping into customer sentiments, while individuals can enhance interpersonal connections.
+                            
+                            EmoSense is more than an app: it's a transformative tool that empowers users to navigate the intricate web of human emotions, 
+                            fostering empathy and effective communication. With adaptability at its core, EmoSense stays ahead of linguistic shifts, 
+                            ensuring that users receive accurate and relevant insights. In an era defined by digital connectivity, EmoSense emerges as a valuable 
+                            companion, decoding emotions and bridging the gap in our increasingly nuanced communication landscape.
+                        """
+            st.markdown(paragraph)
+        st.divider()
 
-        # Make predictions using the loaded Naive Bayes model
-        sentiment = mnb_os.predict(text_vectorized)
+        # __footer__
+        # dividing into two columns using st.columns()
+        col1, col2 = st.columns([3, 1], gap="small")
+        # __Left column__
+        with col1:
+            # Feedback input box
+            with st.form(key="feedback_form"):
+                feedback_input = st.text_input(
+                    "your feedback is valuable to us :", "optional"
+                )
+                submit_button = st.form_submit_button(label="submit")
 
-        # Display sentiment along with emoticons
-        if sentiment[0] == "positive":
-            st.write("It's a positive comment!! 😃")
-        elif sentiment[0] == "neutral":
-            st.write("It's a neutral comment 😐")
-        else:
-            st.write("It's a negative comment 😔")
+        # __Right column__
+        with col2:
+            # reply after submission
+            if submit_button and feedback_input:
+                st.success(
+                    """thanxs for the feedbaack,
+                        please visit review section once.""",
+                    icon="✅",
+                )
 
-# Check if the review is not empty before generating Word Cloud
-if user_input.strip():
-    generate_wordcloud(user_input)
-else:
-    st.warning("No words to generate a word cloud.")
+
+if __name__ == "__main__":
+    # st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
+    main()
