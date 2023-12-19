@@ -78,7 +78,7 @@ letter-spacing: 0.45px;
     border: 2px solid #f5f5f5;
     border-radius: 25px;
     background-color: transparent;
-    border-width: 3px;
+    border-width: 3px !important;
 }
 
 </style>
