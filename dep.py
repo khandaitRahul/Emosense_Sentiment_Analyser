@@ -117,7 +117,7 @@ def main():
     # __Navigation Bar__
     menu = option_menu(
         menu_title=None,
-        options=["About us", "Review section"],
+        options=["About me", "Review section"],
         icons=["house", "book"],
         menu_icon="cast",
         default_index=0,
@@ -175,7 +175,7 @@ def main():
                 st.warning("No words to generate a word cloud.", icon="⚠️")
         st.divider()
 
-    # __About-us-page__
+    # __About-me-page__
     else:
         # __header__
         st.divider()
