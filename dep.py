@@ -101,6 +101,7 @@ def main():
 
     # __Review-section-page__
     if menu == "Review section":
+        st.divider()
         st.header("Navigating through sentiments with emotions🎎")
 
         # dividing into two columns using st.columns()
@@ -152,6 +153,7 @@ def main():
     # __About-us-page__
     else:
         # __header__
+        st.divider()
         st.header("Feel the Pulse : Decoding Emotions with EmoSense💌")
 
         # __content-area__
