@@ -45,7 +45,7 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 page_bg_img = """
 <style>
 [data-testid="stApp"]{
-background-image: linear-gradient( 58.2deg,  rgba(40,91,212,0.73) -3%, rgba(171,53,163,0.45) 49.3%, rgba(255,204,112,0.37) 97.7% );
+background-image: linear-gradient( 58.2deg,  #C33764 -3%, rgba(171,53,163,0.45) 49.3%, #1D267197.7% );
 }
 
 [data-testid="StyledLinkIconContainer"]{
