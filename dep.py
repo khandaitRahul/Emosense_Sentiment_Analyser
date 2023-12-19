@@ -75,7 +75,7 @@ font-family: Times New Roman;
 letter-spacing: 0.45px;
 }
 
-[data-baseweb="textarea""]{
+[data-baseweb="textarea"]{
     border: 2px solid #f5f5f5;
     border-radius: 25px;
     background-color: transparent;
