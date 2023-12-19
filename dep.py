@@ -117,7 +117,7 @@ def main():
     # __Navigation Bar__
     menu = option_menu(
         menu_title=None,
-        options=["About me", "Review section"],
+        options=["Review section", "About me"],
         icons=["house", "book"],
         menu_icon="cast",
         default_index=0,
@@ -224,7 +224,7 @@ def main():
         with col1:
             # Feedback input box
             with st.form(key="feedback_form"):
-                feedback_input = st.text_input("your feedback is valuable to us :")
+                feedback_input = st.text_input("your feedback is valuable for me :")
                 submit_button = st.form_submit_button(label="submit")
 
         # __Right column__
@@ -233,7 +233,7 @@ def main():
             if submit_button and feedback_input:
                 st.success(
                     """thanxs for the feedbaack,
-                        please visit our review section once.""",
+                        please visit us soon.""",
                     icon="✅",
                 )
 
