@@ -154,25 +154,37 @@ def main():
         st.header("Feel the Pulse : Decoding Emotions with EmoSense💌")
 
         # __content-area__
-        col1, col2 = st.columns([1, 3])
-        # __left column__
-        # left black for aesthetic
-        # __Right column__
+        col1, col2, col3 = st.columns([0.45, 0.20, 0.35], gap="small")
+        # __left-col__
+        with col1:
+            para1 = """
+                        EmoSense, an innovative sentiment analysis app, transcends the boundaries of conventional emotional understanding. 
+                        Harnessing cutting-edge algorithms, the app sifts through textual content with precision, unraveling the complex spectrum of 
+                        sentiments expressed. Its user-friendly interface ensures accessibility for all, making the exploration of emotional landscapes 
+                        intuitive and insightful. Businesses can optimize strategies 
+                        by tapping into customer sentiments, while individuals can enhance interpersonal connections.
+                    """
+            link1 = " <span style='font-size:25px;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
+            st.markdown(para1)
+            st.markdown(link1, unsafe_allow_html=True)
+
+        # __middle-col__
+        # logo
         with col2:
-            paragraph = """
-                            EmoSense, an innovative sentiment analysis app, transcends the boundaries of conventional emotional understanding. 
-                            Harnessing cutting-edge algorithms, the app sifts through textual content with precision, unraveling the complex spectrum of 
-                            sentiments expressed. Its user-friendly interface ensures accessibility for all, making the exploration of emotional landscapes 
-                            intuitive and insightful. Whether navigating social media dynamics, assessing customer feedback, or simply decoding written 
-                            communication, EmoSense provides users with a profound understanding of the underlying emotions. Businesses can optimize strategies 
-                            by tapping into customer sentiments, while individuals can enhance interpersonal connections.
-                            
-                            EmoSense is more than an app: it's a transformative tool that empowers users to navigate the intricate web of human emotions, 
-                            fostering empathy and effective communication. With adaptability at its core, EmoSense stays ahead of linguistic shifts, 
+            logo = "https://img.freepik.com/free-vector/flat-hotel-booking-concept-background_23-2148147581.jpg?size=338&ext=jpg&ga=GA1.1.1413502914.1697068800&semt=ais"
+            st.image(logo, width=250)
+
+        # __Right-col__
+        with col3:
+            link2 = "<span style='font-size:25px;'>[Learn more about what we offer](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
+            para2 = """
+                            EmoSense is more than an app: it's a transformative tool that empowers users to navigate the web of human emotions, 
+                            fostering empathy and effective communication. With EmoSense stays ahead of linguistic shifts, 
                             ensuring that users receive accurate and relevant insights. In an era defined by digital connectivity, EmoSense emerges as a valuable 
                             companion, decoding emotions and bridging the gap in our increasingly nuanced communication landscape.
                         """
-            st.markdown(paragraph)
+            st.markdown(link2, unsafe_allow_html=True)
+            st.markdown(para2)
         st.divider()
 
         # __footer__
@@ -182,9 +194,7 @@ def main():
         with col1:
             # Feedback input box
             with st.form(key="feedback_form"):
-                feedback_input = st.text_input(
-                    "your feedback is valuable to us :", "optional"
-                )
+                feedback_input = st.text_input("your feedback is valuable to us :")
                 submit_button = st.form_submit_button(label="submit")
 
         # __Right column__
@@ -193,7 +203,7 @@ def main():
             if submit_button and feedback_input:
                 st.success(
                     """thanxs for the feedbaack,
-                        please visit review section once.""",
+                        please visit our review section once.""",
                     icon="✅",
                 )
 
