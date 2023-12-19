@@ -54,15 +54,23 @@ font-weight: 900;
 font-family: cursive;
 }
 
-[data-baseweb="base-input"]{
-box-sizing: border-box;
-border: 2px solid #000;
+[data-testid="textInputRootElement"]{
 background-color: transparent;
+border: 2px solid #000;
+border-radius: 40px;
 font-size : 40px;
 padding : 0px 20px;
 }
+
+
+
 </style>
 """
+# [data-baseweb="base-input"]{
+# background-color: transparent;
+# font-size : 40px;
+# padding : 0px 20px;
+# }
 
 
 # Function to generate Word Cloud
