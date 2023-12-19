@@ -59,13 +59,14 @@ font-family: cursive;
 
 [data-testid="textInputRootElement"]{
 background-color: transparent;
-border: 2px solid #000;
+border: 2px solid #f5f5f5;
 border-radius: 40px;
-padding : 0px 20px 0px 20px;
+padding : 0px 0px 0px 20px;
 }
 
 [data-baseweb="base-input"]{
 background-color: transparent;
+padding: 0px 0px 0px 15px;
 }
 
 [data-testid="stMarkdownContainer"]{
@@ -73,6 +74,13 @@ color:#faf3dd;
 font-family: Times New Roman;
 letter-spacing: 0.45px;
 }
+
+[data-baseweb="textarea""]{
+    border: 2px solid #f5f5f5;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
 </style>
 """
 
