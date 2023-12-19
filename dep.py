@@ -44,7 +44,7 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 
 page_bg_img = """
 <style>
-[data-testid="stReportViewContainer"]{
+[data-testid="stApp"]{
 background-image: linear-gradient( 40deg,  rgba(0,0,0,1) 9.2%, rgba(127,16,16,1) 103.9% );
 }
 
