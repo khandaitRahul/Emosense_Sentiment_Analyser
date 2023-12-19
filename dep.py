@@ -61,12 +61,11 @@ font-family: cursive;
 background-color: transparent;
 border: 2px solid #f5f5f5;
 border-radius: 40px;
-padding : 0px 0px 0px 20px;
+padding : 0px 0px 0px 10px;
 }
 
 [data-baseweb="base-input"]{
 background-color: transparent;
-padding: 0px 0px 0px 15px;
 }
 
 [data-testid="stMarkdownContainer"]{
@@ -79,6 +78,7 @@ letter-spacing: 0.45px;
     border: 2px solid #f5f5f5;
     border-radius: 25px;
     background-color: transparent;
+    border-width: 3px;
 }
 
 </style>
