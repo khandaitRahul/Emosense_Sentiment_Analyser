@@ -179,7 +179,7 @@ def main():
     else:
         # __header__
         st.divider()
-        st.header("Feel the Pulse : Decoding Emotions with EmoSense💌")
+        st.header("Feel the Pulse: Decoding Emotions with EmoSense💌")
 
         # __content-area__
         col1, col2, col3 = st.columns([0.45, 0.20, 0.35], gap="small")
