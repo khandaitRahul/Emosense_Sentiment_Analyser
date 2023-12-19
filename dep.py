@@ -55,15 +55,14 @@ font-family: cursive;
 }
 
 [data-testid="textInputRootElement"]{
+box-sizing: border-box;
+background-color: #9A208C;
+border-radius: 40px;
 }
 
 [data-baseweb="base-input"]{
 box-sizing: border-box;
-border-radius: 50px;
-background-color: #f8f4;
-color: #000000;
-font-size: 20px;
-padding: 0px 20px;
+background-color: #9A208C;
 }
 </style>
 """
