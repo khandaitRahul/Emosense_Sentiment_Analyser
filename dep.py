@@ -163,7 +163,7 @@ def main():
                         intuitive and insightful. Businesses can optimize strategies 
                         by tapping into customer sentiments, while individuals can enhance interpersonal connections.
                     """
-            link1 = " <span style='font-size:25px;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
+            link1 = " <span style='font-size:25px; text-decoration:none;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
             st.markdown(para1)
             st.markdown(link1, unsafe_allow_html=True)
 
@@ -175,7 +175,7 @@ def main():
 
         # __Right-col__
         with col3:
-            link2 = "<span style='font-size:25px;'>[Explore the features & benefits of this app.](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
+            link2 = "<span style='font-size:25px; text-decoration:none;'>[Explore the features & benefits of this app.](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
             para2 = """
                             EmoSense is more than an app: it's a transformative tool that empowers users to navigate the web of human emotions, 
                             fostering empathy and effective communication. With EmoSense stays ahead of linguistic shifts, 
