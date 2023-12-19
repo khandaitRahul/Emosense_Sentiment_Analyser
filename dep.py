@@ -54,15 +54,9 @@ font-weight: 900;
 font-family: cursive;
 }
 
-[data-testid="textInputRootElement"]{
-box-sizing: border-box;
-background-color: transparent;
-border-radius: 40px;
-font-size : 40px;
-}
-
 [data-baseweb="base-input"]{
 box-sizing: border-box;
+border: 2px solid #000;
 background-color: transparent;
 font-size : 40px;
 padding : 0px 20px;
