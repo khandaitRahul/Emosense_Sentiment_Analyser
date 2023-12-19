@@ -1,13 +1,14 @@
 import streamlit as st
 
-# import subprocess
-# subprocess.call(["pip", "install", "wordcloud"])
-# from wordcloud import WordCloud
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
 # import nltk
 # from nltk.corpus import stopwords
 
 import pickle
 import pandas as pd
+import numpy as np
 import re
 import string
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -63,13 +64,23 @@ font-family: cursive;
 st.markdown(page_bg_img, unsafe_allow_html=True)
 st.title("Sentiment Analysis App")
 st.subheader("✨ Unveiling Experiences at XYZ-Hotel 🧧")
-# st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
+st.set_option("deprecation.showPyplotGlobalUse", False)  # for wordcloud
 
 
-# # wordcloud function
-# def generate_wordcloud(user_input):
-#     wordcloud = WordCloud(width=800, height=400, background_color="white").generate(user_input)
-#     st.image(wordcloud.to_image(), caption="Word Cloud", use_column_width=True)
+# Function to generate Word Cloud
+def generate_wordcloud(user_input):
+    if user_input and any(
+        c.isalpha() for c in user_input
+    ):  # Check if there are any alphabetical characters in the input
+        wordcloud = WordCloud(width=800, height=400, background_color="white").generate(
+            user_input
+        )
+        fig, ax = plt.subplots(figsize=(10, 5))
+        ax.imshow(wordcloud, interpolation="bilinear")
+        ax.axis("off")
+        st.pyplot(fig)
+    else:
+        st.warning("No words to generate a word cloud.")
 
 
 # User input text area
@@ -97,5 +108,8 @@ if st.button("Predict your sentiments"):
         else:
             st.write("It's a negative comment 😔")
 
-# if user_input:
-#     generate_wordcloud(user_input)
+# Check if the review is not empty before generating Word Cloud
+if user_input.strip():
+    generate_wordcloud(user_input)
+else:
+    st.warning("No words to generate a word cloud.")
