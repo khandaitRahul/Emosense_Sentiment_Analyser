@@ -174,7 +174,7 @@ def main():
         # __middle-col__
         # logo
         with col2:
-            logo = "https://img.freepik.com/free-vector/flat-hotel-booking-concept-background_23-2148147581.jpg?size=338&ext=jpg&ga=GA1.1.1413502914.1697068800&semt=ais"
+            logo = "https://png.pngtree.com/png-clipart/20230914/original/pngtree-cartoon-building-in-the-background-with-stars-around-it-vector-png-image_11089578.png"
             st.image(logo, width=250)
 
         # __Right-col__
