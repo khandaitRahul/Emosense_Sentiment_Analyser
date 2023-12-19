@@ -103,7 +103,7 @@ def main():
         menu_items=None,
     )
     st.markdown(page_bg_img, unsafe_allow_html=True)
-    st.title("EmoSense App🎭")  # App name
+    st.title("🎭EmoSense App")  # App name
 
     # __Navigation Bar__
     menu = option_menu(
@@ -118,13 +118,13 @@ def main():
     # __Review-section-page__
     if menu == "Review section":
         st.divider()
-        st.header("Navigating through sentiments with emotions🎎")
+        st.header("🎎Navigating through sentiments with emotions")
 
         # dividing into two columns using st.columns()
         col1, col2 = st.columns(2, gap="small")
         # __Left column__
         with col1:
-            st.subheader("unveil your experience with XYZ-Hotel🧧")
+            st.subheader("✨unveil your experience with XYZ-Hotel🧧")
             # User input text area
             user_input = st.text_area("write a review to us :")
 
