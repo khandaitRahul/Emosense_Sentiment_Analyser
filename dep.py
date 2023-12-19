@@ -167,7 +167,7 @@ def main():
                         intuitive and insightful. Businesses can optimize strategies 
                         by tapping into customer sentiments, while individuals can enhance interpersonal connections.
                     """
-            link1 = " <span style='font-size:25px;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
+            link1 = " <span style='font-size:25px; color:#200E3A;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
             st.markdown(para1)
             st.markdown(link1, unsafe_allow_html=True)
 
