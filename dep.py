@@ -179,7 +179,7 @@ def main():
 
         # __Right-col__
         with col3:
-            link2 = "<span style='font-size:25px;'>[Learn more about what we offer](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
+            link2 = "<span style='font-size:25px;'>[Explore the features & benefits of this app.](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
             para2 = """
                             EmoSense is more than an app: it's a transformative tool that empowers users to navigate the web of human emotions, 
                             fostering empathy and effective communication. With EmoSense stays ahead of linguistic shifts, 
