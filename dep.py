@@ -61,14 +61,17 @@ font-family: cursive;
 background-color: transparent;
 border: 2px solid #000;
 border-radius: 40px;
-padding : 0px 0px 0px 20px;
+padding : 0px 20px 0px 20px;
 }
 
 [data-baseweb="base-input"]{
 background-color: transparent;
 }
 
-
+[data-testid="stMarkdownContainer"]{
+color:#faf3dd;
+font-family: Times New Roman;
+}
 </style>
 """
 
