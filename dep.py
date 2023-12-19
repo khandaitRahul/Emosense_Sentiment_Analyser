@@ -53,7 +53,7 @@ color:#faf3dd;
 [id="unveiling-experiences-at-xyz-hotel"]{
 color:#faf3dd;
 font-weight: 900;
-font-family: Lucida Handwriting, cursive;
+font-family: cursive;
 }
 </style>
 """
