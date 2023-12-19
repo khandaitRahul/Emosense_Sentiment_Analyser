@@ -72,6 +72,7 @@ background-color: transparent;
 color:#faf3dd;
 font-family: Times New Roman;
 letter-spacing: 0.45px;
+margin: 5px 0px;
 }
 
 [data-baseweb="textarea"]{
@@ -192,7 +193,7 @@ def main():
                         by tapping into customer sentiments, while individuals can enhance interpersonal connections.
                         </span>
                     """
-            link1 = " <span style='font-size:25px; letter-spacing: 0.45px; margin: 30px 0px 0px 0px;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
+            link1 = " <span style='font-size:25px; letter-spacing: 0.45px;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
             st.markdown(para1, unsafe_allow_html=True)
             st.markdown(link1, unsafe_allow_html=True)
 
@@ -204,7 +205,7 @@ def main():
 
         # __Right-col__
         with col3:
-            link2 = "<span style='font-size:25px; letter-spacing:0.45px; margin: 0px 0px 30px 0px;'>[Explore the features & benefits of this app.](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
+            link2 = "<span style='font-size:25px; letter-spacing:0.45px;'>[Curious about our app?](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
             para2 = """<span style='font-size:18px;'>
                             EmoSense is more than an app: it's a transformative tool that empowers users to navigate the web of human emotions, 
                             fostering empathy and effective communication. With EmoSense stays ahead of linguistic shifts, 
