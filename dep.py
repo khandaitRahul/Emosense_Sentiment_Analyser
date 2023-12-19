@@ -43,15 +43,15 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 page_bg_img = """
 <style>
 [data-testid="stReportViewContainer"]{
-background: linear-gradient(135deg,#EB5757, #000000);
+background: linear-gradient(135deg,#ad2831, #640d14,#03071e);
 }
 
 [id="sentiment-analysis-app"]{
-color:#000000;
+color:#faf3dd;
 }
 
 [id="unveiling-experiences-at-xyz-hotel"]{
-color:#000000;
+color:#faf3dd;
 font-weight: 900;
 font-family: cursive;
 }
