@@ -99,7 +99,7 @@ def main():
         orientation="horizontal",
     )
 
-    # __Review Section__
+    # __Review-section-page__
     if menu == "Review section":
         st.header("Navigating through sentiments with emotions🎎")
 
@@ -147,8 +147,9 @@ def main():
                 generate_wordcloud(user_input)
             else:
                 st.warning("No words to generate a word cloud.", icon="⚠️")
+        st.divider()
 
-    # __About us__
+    # __About-us-page__
     else:
         # __header__
         st.header("Feel the Pulse : Decoding Emotions with EmoSense💌")
