@@ -44,26 +44,26 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 
 page_bg_img = """
 <style>
-# backgroud_container
+
 [data-testid="stApp"]{
 background-image: linear-gradient( 58.2deg,  #C33764, rgba(171,53,163,0.45), #1D267197 );
 }
 
-# title,header,subheader
+
 [data-testid="StyledLinkIconContainer"]{
 color:#faf3dd;
 font-weight: 900;
 font-family: cursive;
 }
 
-# about_us_feedback_input
+
 [data-testid="textInputRootElement"]{
 background-color: transparent;
 border: 2px solid #000;
 border-radius: 40px;
 padding : 0px 0px 0px 20px;
 }
-# about_us_feedback_input
+
 [data-baseweb="base-input"]{
 background-color: transparent;
 }
