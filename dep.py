@@ -72,7 +72,7 @@ background-color: transparent;
 color:#faf3dd;
 font-family: Times New Roman;
 letter-spacing: 0.45px;
-margin: 5px 0px;
+margin: 2.5px 0px;
 }
 
 [data-baseweb="textarea"]{
