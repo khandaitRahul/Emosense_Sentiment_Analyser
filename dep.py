@@ -45,11 +45,7 @@ mnb_os = pickle.load(open("mnb_os.sav", "rb"))
 page_bg_img = """
 <style>
 [data-testid="stApp"]{
-background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-}
-
-[id="sentiment-analysis-app"]{
-color:#faf3dd;
+background-image: linear-gradient( 58.2deg,  rgba(40,91,212,0.73) -3%, rgba(171,53,163,0.45) 49.3%, rgba(255,204,112,0.37) 97.7% );
 }
 
 [id="unveiling-experiences-at-xyz-hotel"]{
@@ -167,7 +163,7 @@ def main():
                         intuitive and insightful. Businesses can optimize strategies 
                         by tapping into customer sentiments, while individuals can enhance interpersonal connections.
                     """
-            link1 = " <span style='font-size:25px; font-weight:bold;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
+            link1 = " <span style='font-size:25px;'>Ready for a memorable stay? [Book your hotel now](https://www.google.com/)</span>"
             st.markdown(para1)
             st.markdown(link1, unsafe_allow_html=True)
 
@@ -179,7 +175,7 @@ def main():
 
         # __Right-col__
         with col3:
-            link2 = "<span style='font-size:25px;font-weight:bold;'>[Explore the features & benefits of this app.](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
+            link2 = "<span style='font-size:25px;'>[Explore the features & benefits of this app.](https://medium.com/@pavansahu0809/predictive-modelling-for-hotel-ratings-a-data-science-approach-1d4af6431bb5 )</span>"
             para2 = """
                             EmoSense is more than an app: it's a transformative tool that empowers users to navigate the web of human emotions, 
                             fostering empathy and effective communication. With EmoSense stays ahead of linguistic shifts, 
