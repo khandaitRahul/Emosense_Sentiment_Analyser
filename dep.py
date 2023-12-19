@@ -112,7 +112,7 @@ def main():
         menu_items=None,
     )
     st.markdown(page_bg_img, unsafe_allow_html=True)
-    st.title("🎭 EmoSense App")  # App name
+    st.title("🎭 EmoSense")  # App name
 
     # __Navigation Bar__
     menu = option_menu(
