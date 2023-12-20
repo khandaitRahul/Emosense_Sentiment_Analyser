@@ -81,11 +81,6 @@ margin: 2.5px 0px;
     background-color: transparent;
     border-width: 3px !important ;
 }
-
-.menu .container-xxl[data-v-5af006b8]{
-    background-color: transparent !important ;
-}    
-
 </style>
 """
 
