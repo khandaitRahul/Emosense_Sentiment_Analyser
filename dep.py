@@ -79,12 +79,12 @@ margin: 2.5px 0px;
     border: 2px solid #f5f5f5;
     border-radius: 25px;
     background-color: transparent;
-    border-width: 3px !important;
+    border-width: 3px !important ;
 }
 
 [data-v-5af006b8]{
-    background-color: transparent;
-    border-radius: 0.5rem;
+    background-color: transparent !important ;
+    border-radius: 0.5rem !important ;
 }    
 
 </style>
