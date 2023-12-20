@@ -82,9 +82,8 @@ margin: 2.5px 0px;
     border-width: 3px !important ;
 }
 
-[data-v-5af006b8]{
+.menu .container-xxl[data-v-5af006b8]{
     background-color: transparent !important ;
-    border-radius: 0.5rem !important ;
 }    
 
 </style>
